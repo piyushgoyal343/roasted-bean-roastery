@@ -1,0 +1,73 @@
+/* Global Custom Styles for Roasted Bean Roastery */
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.text-balanced {
+    text-wrap: balance;
+}
+
+.hero-pattern {
+    background-color: #fff8f6;
+    background-image: radial-gradient(#ffe9e3 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+}
+
+.hero-mask {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.rustic-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #827472, transparent);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff8f6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e6e0c9;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc6b1;
+}
+
+/* Page View Slide/Fade Transitions */
+.view-section {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.view-section.hidden {
+    display: none !important;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.view-section.fade-in {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll reveal items */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
