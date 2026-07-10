@@ -2,6 +2,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   preview: {
-    allowedHosts: true
+    allowedHosts: ['roasted-bean-roastery.onrender.com']
   }
 });
