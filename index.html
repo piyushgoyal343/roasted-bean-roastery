@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Roasted Bean Roastery | Artisanal Coffee</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-low": "#fff1ec",
+                "error-container": "#ffdad6",
+                "on-surface-variant": "#504442",
+                "background": "#fff8f6",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed-dim": "#88d982",
+                "on-primary-container": "#ae8d87",
+                "secondary-container": "#e6e0c9",
+                "on-surface": "#2e150b",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#ffdbcf",
+                "error": "#ba1a1a",
+                "on-tertiary-fixed": "#002204",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#676351",
+                "tertiary-fixed": "#a3f69c",
+                "primary-fixed": "#ffdad4",
+                "surface-variant": "#ffdbcf",
+                "on-tertiary-fixed-variant": "#005312",
+                "on-tertiary-container": "#56a554",
+                "surface-dim": "#ffd0bf",
+                "inverse-primary": "#e3beb8",
+                "on-primary-fixed-variant": "#5b403c",
+                "primary-fixed-dim": "#e3beb8",
+                "on-background": "#2e150b",
+                "secondary-fixed-dim": "#ccc6b1",
+                "inverse-on-surface": "#ffede7",
+                "surface-container-high": "#ffe2d9",
+                "on-primary-fixed": "#2b1613",
+                "tertiary-container": "#003508",
+                "on-secondary": "#ffffff",
+                "outline-variant": "#d3c3c0",
+                "tertiary": "#001d03",
+                "on-secondary-fixed": "#1e1c0e",
+                "surface-bright": "#fff8f6",
+                "surface-container": "#ffe9e3",
+                "inverse-surface": "#46291e",
+                "secondary-fixed": "#e9e2cc",
+                "primary": "#271310",
+                "on-error-container": "#93000a",
+                "on-secondary-fixed-variant": "#4a4737",
+                "secondary": "#625f4d",
+                "primary-container": "#3e2723",
+                "on-error": "#ffffff",
+                "surface": "#fff8f6",
+                "outline": "#827472",
+                "surface-tint": "#745853"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "sm": "12px",
+                "lg": "48px",
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "16px",
+                "md": "24px",
+                "xs": "4px",
+                "xl": "80px",
+                "base": "8px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Playfair Display"],
+                "body-lg": ["Inter"],
+                "body-sm": ["Inter"],
+                "headline-xl": ["Playfair Display"],
+                "label-sm": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-md": ["Playfair Display"],
+                "headline-lg-mobile": ["Playfair Display"],
+                "label-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden bg-background text-on-surface">
+
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant/10">
+    <nav class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+        <a class="font-headline-md text-headline-md font-semibold text-primary" href="#/">Roasted Bean</a>
+        <!-- Desktop Links -->
+        <div class="hidden md:flex gap-gutter items-center navbar-links">
+            <a class="nav-link font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#/">Home</a>
+            <a class="nav-link font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#/menu">Menu</a>
+            <a class="nav-link font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#/about">About</a>
+            <a class="nav-link font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#/contact">Contact</a>
+        </div>
+        <div class="flex items-center gap-sm">
+            <a href="#/contact" class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all duration-200 hidden sm:inline-block text-center">
+                Contact Us
+            </a>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn md:hidden text-primary p-sm flex items-center justify-center rounded-lg hover:bg-surface-container-low transition-colors">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-nav-drawer fixed inset-y-0 right-0 z-50 w-64 bg-background shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-outline-variant/30 flex flex-col">
+    <div class="flex justify-between items-center h-20 px-margin-mobile border-b border-outline-variant/20">
+        <span class="font-headline-md text-headline-md font-semibold text-primary">Menu</span>
+        <button class="mobile-nav-close-btn text-primary p-sm rounded-lg hover:bg-surface-container-low transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <div class="flex flex-col p-md gap-md mobile-nav-links">
+        <a class="mobile-nav-link font-body-md text-body-lg text-on-surface-variant hover:text-primary" href="#/">Home</a>
+        <a class="mobile-nav-link font-body-md text-body-lg text-on-surface-variant hover:text-primary" href="#/menu">Menu</a>
+        <a class="mobile-nav-link font-body-md text-body-lg text-on-surface-variant hover:text-primary" href="#/about">About</a>
+        <a class="mobile-nav-link font-body-md text-body-lg text-on-surface-variant hover:text-primary" href="#/contact">Contact</a>
+    </div>
+</div>
+
+<!-- ============================================== -->
+<!-- VIEW SECTIONS (SPA PAGE CONTAINER) -->
+<!-- ============================================== -->
+<main id="app-view-container" class="relative min-h-[70vh]">
+
+    <!-- HOME VIEW -->
+    <section id="view-home" class="view-section hidden pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[870px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDK9lgNcbI2VZEQZKRnCQFn8CS0_0AUgzb9XEBt_Yg97wZ7kjBd3DNQn3cLm2EDaA9NIavOBiWBhu5maZEKvCOUNg7oMG-2dCdRnhPpC5kiYBS9w2ASg2nwNk4VHFWg-Km90yDwXNBjVego7V1CLjKaD7NPcTYtm8T0Zh4OV1jkEA4x_s7cTqNS7CFP8wi6isHmzDimy1DZQq5m_iOqX__TcsZl8k6AsGpRsaQM8X-5MRiTYD8TyxneWotRMKr_N1X7Q1orfctzsJgT')"></div>
+                <div class="absolute inset-0 bg-primary/20"></div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop w-full">
+                <div class="max-w-2xl bg-background/40 backdrop-blur-sm p-lg md:p-xl rounded-xl">
+                    <h1 class="font-headline-xl text-headline-xl text-primary mb-md reveal-on-scroll">
+                        Artisanal Coffee, <br/>Roasted with Heart
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg reveal-on-scroll" style="transition-delay: 100ms;">
+                        Experience the warmth of small-batch roasts in the heart of the city. Every bean is selected with care and roasted to perfection.
+                    </p>
+                    <div class="flex flex-wrap gap-md reveal-on-scroll" style="transition-delay: 200ms;">
+                        <a href="#/menu" class="bg-primary text-on-primary px-lg py-md rounded-lg font-label-md hover:opacity-90 transition-all flex items-center gap-base">
+                            View Menu
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                        <a href="#/about" class="border border-primary text-primary px-lg py-md rounded-lg font-label-md hover:bg-primary/5 transition-all">
+                            Visit Our Roastery
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Seasonal Drinks (Bento Style) -->
+        <section class="py-xl max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-gutter">
+                <div class="max-w-xl">
+                    <span class="text-on-tertiary-container bg-tertiary-fixed-dim/20 px-sm py-xs rounded-full font-label-sm uppercase tracking-wider mb-sm inline-block">Seasonal Specials</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Winter Harvest Collection</h2>
+                </div>
+                <p class="text-on-surface-variant font-body-md max-w-md">Limited-time creations inspired by the season's most comforting flavors and artisanal ingredients.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
+                <!-- Lavender Latte (Large Card) -->
+                <div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low hover:shadow-xl transition-all duration-500 min-h-[350px]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-0tFTs2L_Lv3r0VvLjO-BxeILKiYLmIPR-cZv_eWrD6GjknFpvK69t9fND-_486g8JBNE5HXaW8fabWhvjfQynJYp7nLnYCQikMqCgfrgY0luKvbBMA159dRQJ6HB6v3lwfD53ZLJfDNvC3UlwRhkstJ8GR3Ga1wcEWnRliDbOgYI4WpKVkrNJnkL4BH-lNeCjcK8uOrTKrdaObhoehykhjXfmZ_5b01E6nJnlANlseho8nk4menkt6vbyNKfjUDwRwmXIYnGroEo')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-lg w-full">
+                        <div class="flex items-center gap-base mb-xs">
+                            <span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'FILL' 1;">spa</span>
+                            <span class="text-on-primary/80 font-label-md">Floral &amp; Calm</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-on-primary mb-xs">Lavender Latte</h3>
+                        <p class="text-on-primary/70 font-body-md max-w-md mb-md">Our signature espresso blended with steamed milk and infused with organic culinary lavender honey.</p>
+                        <a href="#/menu" class="bg-surface-container-lowest text-primary px-md py-sm rounded-full font-label-md inline-flex items-center gap-xs hover:bg-white transition-colors">
+                            View on Menu ($6.50)
+                        </a>
+                    </div>
+                </div>
+                <!-- Maple Cold Brew (Vertical Card) -->
+                <div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low hover:shadow-xl transition-all duration-500 min-h-[350px]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMaxET2CDAV_L6eSBbbA2X8rYYPovXATSM8clVIvhJHlvhnex1Oh-e6dz9eDW3v69Nkyc0MV95OUWjocdAIEbUq67YHTy13Iwhpoi6BrnAvp7-my9P5cL5u7YLJmNlyzSECSDEK2UDDTnjfLTiXiThP0eWBIlH6v8u1YLL8Me3P-CtW6VLh4OU5E_6cp8Ag_oznX7i96-6lJIabDyJ27Fg96inLTd5NIcDEZ8iIC1LRiV4qvC2lGo-BGNtEc5vBUE9hjBnY1Fbatqk')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-lg w-full">
+                        <div class="flex items-center gap-base mb-xs">
+                            <span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'FILL' 1;">forest</span>
+                            <span class="text-on-primary/80 font-label-md">Bold &amp; Sweet</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-on-primary mb-xs">Maple Cold Brew</h3>
+                        <p class="text-on-primary/70 font-body-sm mb-md">12-hour cold extraction topped with maple cream foam.</p>
+                        <a href="#/menu" class="text-on-primary font-label-md border-b border-on-primary pb-xs inline-flex items-center gap-xs hover:opacity-80 transition-opacity">
+                            View Menu Options
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Teaser -->
+        <section class="bg-surface-container-low py-xl overflow-hidden">
+            <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-xl">
+                <div class="relative">
+                    <div class="aspect-square rounded-xl overflow-hidden reveal-on-scroll">
+                        <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-Xnk_9G8ZjyGL-8PbyMkHvLvgtWAgybu3lrhyD9ONuVDgy44pJtflUvbyfK-lASmpc-3Nwg6OSyjwl_y0T4bKHKLg6PO8pgvKB4clrevHuRzQbXFSSVZu05VwSHaGayjcQbjh4UEi1YJhJxinRv_-ODbYtFvjgf_EsCLwC0fAEhNOHW_q49Ggx6KaUGLLJycuZRNwP_CBsJJ_PKzSxpMnxbj6tzTiv4HxLXEobbbb8i73xW9e2QHOGa707Qv-p5C-A_mplme_oh8d')"></div>
+                    </div>
+                    <!-- Decorative Element -->
+                    <div class="absolute -bottom-base -right-base w-1/2 h-1/2 bg-secondary-container -z-10 rounded-xl"></div>
+                </div>
+                <div class="reveal-on-scroll" style="transition-delay: 200ms;">
+                    <span class="text-primary font-label-md mb-sm block">Our Roots</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Small Batches, <br/>Uncompromising Quality.</h2>
+                    <p class="text-on-surface-variant font-body-lg mb-lg">
+                        What started as a single vintage roaster in a garage has grown into a community staple. We believe coffee is more than just caffeine; it's a ritual that connects people. 
+                    </p>
+                    <div class="grid grid-cols-2 gap-gutter mb-lg">
+                        <div class="flex flex-col gap-xs">
+                            <span class="font-headline-md text-primary">100%</span>
+                            <span class="font-label-sm text-on-surface-variant uppercase">Ethically Sourced</span>
+                        </div>
+                        <div class="flex flex-col gap-xs">
+                            <span class="font-headline-md text-primary">48h</span>
+                            <span class="font-label-sm text-on-surface-variant uppercase">Freshness Window</span>
+                        </div>
+                    </div>
+                    <a class="font-label-md text-primary flex items-center gap-base group" href="#/about">
+                        Discover Our Full Story
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">trending_flat</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Carousel Section -->
+        <section class="py-xl bg-surface-container-low/30 overflow-hidden border-t border-outline-variant/10">
+            <div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop text-center">
+                <span class="text-primary font-label-md uppercase tracking-widest mb-sm block">Kind Words</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-xl">What Our Guests Say</h2>
+                
+                <!-- Carousel Container -->
+                <div class="relative min-h-[260px] flex items-center justify-center">
+                    <!-- Left Arrow -->
+                    <button id="prev-testimonial" class="absolute left-0 md:-left-12 text-primary hover:bg-surface-container-low hover:border-primary/30 p-sm rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm z-10 duration-200">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <!-- Right Arrow -->
+                    <button id="next-testimonial" class="absolute right-0 md:-right-12 text-primary hover:bg-surface-container-low hover:border-primary/30 p-sm rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm z-10 duration-200">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                    
+                    <!-- Content Card (Slider wrapper) -->
+                    <div class="w-full max-w-2xl px-12 transition-all duration-350" id="testimonial-card">
+                        <!-- Filled Dynamically by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- MENU VIEW -->
+    <section id="view-menu" class="view-section hidden pt-24 pb-xl">
+        <!-- Hero Section -->
+        <section class="hero-pattern py-xl px-margin-mobile md:px-margin-desktop text-center mb-xl">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="font-headline-xl text-headline-xl text-primary mb-md">Our Seasonal Menu</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant text-balanced">
+                    Meticulously sourced, roasted in small batches, and served with intention. Explore our curated selection of artisanal coffee and pastries.
+                </p>
+            </div>
+        </section>
+
+        <!-- Menu Container -->
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-xl">
+            
+            <!-- Espresso Section -->
+            <div class="flex flex-col gap-md">
+                <div class="flex items-center gap-base border-b border-outline-variant/30 pb-sm">
+                    <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">coffee</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Espresso</h2>
+                </div>
+                <div id="espresso-menu-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                    <!-- Dynamic Espresso items -->
+                </div>
+            </div>
+
+            <!-- Pour Over Section -->
+            <div class="flex flex-col gap-md">
+                <div class="flex items-center gap-base border-b border-outline-variant/30 pb-sm">
+                    <span class="material-symbols-outlined text-primary text-3xl">water_drop</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Pour Over</h2>
+                </div>
+                <div id="pour-over-menu-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                    <!-- Dynamic Pour Over items -->
+                </div>
+            </div>
+
+            <!-- Pastries Section -->
+            <div class="flex flex-col gap-md">
+                <div class="flex items-center gap-base border-b border-outline-variant/30 pb-sm">
+                    <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">bakery_dining</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Pastries</h2>
+                </div>
+                <div id="pastries-menu-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                    <!-- Dynamic Pastries items -->
+                </div>
+            </div>
+
+            <!-- Promo Row (Equal visual size) -->
+            <div class="bg-primary text-on-primary p-lg rounded-xl flex flex-col md:flex-row items-center justify-between gap-md mt-lg border border-primary/5">
+                <div>
+                    <h4 class="font-headline-md text-headline-md mb-xs">Treat Yourself?</h4>
+                    <p class="font-body-md text-white/80">Pair any pour-over with a pastry and save 15% on your daily ritual.</p>
+                </div>
+                <div class="flex items-center gap-sm bg-white/10 px-md py-sm rounded-lg backdrop-blur-md">
+                    <span class="material-symbols-outlined text-3xl">celebration</span>
+                    <span class="font-label-md">Daily fresh promo code: <strong> rituals15</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT VIEW -->
+    <section id="view-about" class="view-section hidden pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[716px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center brightness-75" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMJ8jzpQ2os58V9LRZRK2994Ro_3ljQOiA2c-Ze8t_kD-O6QladGTHe1Aprt4L2N558Lg5j_iYFmV3ylScVeR3OSlg2Mu5EDyGKWPvVZ0JjBlcBqAKNdAL35580kHPNDGsqe6LsB05fTZ3BKxSa-EbM7rA2A2AIHGBDhqrOezLHiLWdYefM5pN5c6fZyslt400KkFj23VRSp-ecRTc72ni-QIfOLkk_JNTKX4h1I8F4BI8FB5OivLHYCwEpCKypQhTGY-pt5r8ETKN')"></div>
+            </div>
+            <div class="relative z-10 text-center px-margin-mobile">
+                <h1 class="font-headline-xl text-headline-xl text-on-primary mb-md max-w-3xl mx-auto text-balance">The Art of the Slow Roast</h1>
+                <p class="font-body-lg text-body-lg text-on-primary/90 max-w-xl mx-auto">Founded on the belief that coffee is more than a drink—it's a tactile connection to the earth and the hands that harvest it.</p>
+            </div>
+        </section>
+
+        <!-- The Roastery Section -->
+        <section class="py-xl max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+                <div class="order-2 lg:order-1">
+                    <span class="font-label-md text-label-md text-primary-container bg-primary-fixed px-sm py-xs mb-md inline-block uppercase tracking-widest">Our Craft</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-md">The Roastery</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-gutter">
+                        Our small-batch process is an exercise in restraint. We roast in a vintage 1968 iron drum, allowing us to feel the heat and hear the "first crack" with visceral precision. Every batch is limited to twelve kilograms to ensure absolute consistency.
+                    </p>
+                    <div class="grid grid-cols-2 gap-gutter py-md">
+                        <div class="flex flex-col gap-xs">
+                            <span class="material-symbols-outlined text-primary mb-xs" style="font-variation-settings: 'FILL' 1;">eco</span>
+                            <span class="font-label-md text-label-md text-primary">Ethically Sourced</span>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">Direct trade with farmers in Ethiopia and Colombia.</p>
+                        </div>
+                        <div class="flex flex-col gap-xs">
+                            <span class="material-symbols-outlined text-primary mb-xs" style="font-variation-settings: 'FILL' 1;">timer</span>
+                            <span class="font-label-md text-label-md text-primary">Small Batch</span>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">Roasts under 15kg for maximum profile control.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Grid -->
+                <div class="order-1 lg:order-2 grid grid-cols-12 grid-rows-6 h-[550px] gap-sm md:gap-gutter">
+                    <!-- Cell 1: Roasted Coffee Beans Cooling -->
+                    <div class="col-span-8 row-span-4 rounded-xl overflow-hidden shadow-sm relative group">
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMaxET2CDAV_L6eSBbbA2X8rYYPovXATSM8clVIvhJHlvhnex1Oh-e6dz9eDW3v69Nkyc0MV95OUWjocdAIEbUq67YHTy13Iwhpoi6BrnAvp7-my9P5cL5u7YLJmNlyzSECSDEK2UDDTnjfLTiXiThP0eWBIlH6v8u1YLL8Me3P-CtW6VLh4OU5E_6cp8Ag_oznX7i96-6lJIabDyJ27Fg96inLTd5NIcDEZ8iIC1LRiV4qvC2lGo-BGNtEc5vBUE9hjBnY1Fbatqk"/>
+                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <!-- Cell 2: Pouring Kettle Close Up -->
+                    <div class="col-span-4 row-span-3 rounded-xl overflow-hidden shadow-sm relative group">
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK9lgNcbI2VZEQZKRnCQFn8CS0_0AUgzb9XEBt_Yg97wZ7kjBd3DNQn3cLm2EDaA9NIavOBiWBhu5maZEKvCOUNg7oMG-2dCdRnhPpC5kiYBS9w2ASg2nwNk4VHFWg-Km90yDwXNBjVego7V1CLjKaD7NPcTYtm8T0Zh4OV1jkEA4x_s7cTqNS7CFP8wi6isHmzDimy1DZQq5m_iOqX__TcsZl8k6AsGpRsaQM8X-5MRiTYD8TyxneWotRMKr_N1X7Q1orfctzsJgT"/>
+                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <!-- Cell 3: Coffee art latte -->
+                    <div class="col-span-4 row-span-3 rounded-xl overflow-hidden shadow-sm relative group">
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-0tFTs2L_Lv3r0VvLjO-BxeILKiYLmIPR-cZv_eWrD6GjknFpvK69t9fND-_486g8JBNE5HXaW8fabWhvjfQynJYp7nLnYCQikMqCgfrgY0luKvbBMA159dRQJ6HB6v3lwfD53ZLJfDNvC3UlwRhkstJ8GR3Ga1wcEWnRliDbOgYI4WpKVkrNJnkL4BH-lNeCjcK8uOrTKrdaObhoehykhjXfmZ_5b01E6nJnlANlseho8nk4menkt6vbyNKfjUDwRwmXIYnGroEo"/>
+                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <!-- Cell 4: Green bean sorting -->
+                    <div class="col-span-8 row-span-2 rounded-xl overflow-hidden shadow-sm relative group">
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Xnk_9G8ZjyGL-8PbyMkHvLvgtWAgybu3lrhyD9ONuVDgy44pJtflUvbyfK-lASmpc-3Nwg6OSyjwl_y0T4bKHKLg6PO8pgvKB4clrevHuRzQbXFSSVZu05VwSHaGayjcQbjh4UEi1YJhJxinRv_-ODbYtFvjgf_EsCLwC0fAEhNOHW_q49Ggx6KaUGLLJycuZRNwP_CBsJJ_PKzSxpMnxbj6tzTiv4HxLXEobbbb8i73xW9e2QHOGa707Qv-p5C-A_mplme_oh8d"/>
+                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rustic Divider -->
+        <div class="rustic-divider my-xl max-w-7xl mx-auto opacity-30"></div>
+
+        <!-- Sourcing Philosophy -->
+        <section class="py-xl bg-surface-container-low/40 border-t border-b border-outline-variant/10">
+            <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="max-w-3xl mx-auto text-center mb-xl">
+                    <span class="font-label-md text-primary tracking-widest uppercase mb-sm inline-block">Sourcing Philosophy</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Direct Trade, Real Impact</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        We bypass conventional distribution chains to work directly with coffee producers. By visiting estates in Sidama and Santander, we build deep relationships, negotiate prices above fair trade standards, and help fund local farm infrastructure.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-lg text-center">
+                    <div class="p-md rounded-xl bg-background/50 backdrop-blur-sm shadow-sm reveal-on-scroll flex flex-col items-center gap-md">
+                        <span class="text-headline-xl font-headline-xl text-primary leading-none">03</span>
+                        <h3 class="text-label-md font-label-md text-primary uppercase tracking-wider">Direct Origin Partnerships</h3>
+                        <p class="text-body-sm font-body-sm text-on-surface-variant mt-xs">Ongoing partnerships with family-run farms in Colombia, Ethiopia, and Guatemala.</p>
+                    </div>
+                    <div class="p-md rounded-xl bg-background/50 backdrop-blur-sm shadow-sm reveal-on-scroll flex flex-col items-center gap-md" style="transition-delay: 100ms;">
+                        <span class="text-headline-xl font-headline-xl text-primary leading-none">150%</span>
+                        <h3 class="text-label-md font-label-md text-primary uppercase tracking-wider">Premium Price Above Fair Trade</h3>
+                        <p class="text-body-sm font-body-sm text-on-surface-variant mt-xs">Ensuring farmers receive a sustainable living wage and can reinvest in soil quality.</p>
+                    </div>
+                    <div class="p-md rounded-xl bg-background/50 backdrop-blur-sm shadow-sm reveal-on-scroll flex flex-col items-center gap-md" style="transition-delay: 200ms;">
+                        <span class="text-headline-xl font-headline-xl text-primary leading-none">100%</span>
+                        <h3 class="text-label-md font-label-md text-primary uppercase tracking-wider">Traceable Single-Origin Lots</h3>
+                        <p class="text-body-sm font-body-sm text-on-surface-variant mt-xs">Every bag is fully traceable to the precise harvest block and altitude.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- CONTACT VIEW -->
+    <section id="view-contact" class="view-section hidden pt-20">
+        <!-- Hero Section -->
+        <section class="hero-pattern py-xl px-margin-mobile md:px-margin-desktop text-center mb-xl">
+            <div class="max-w-3xl mx-auto">
+                <span class="font-label-md text-primary tracking-widest uppercase mb-sm inline-block">Find Us</span>
+                <h1 class="font-headline-xl text-headline-xl text-primary mb-md">Our Locations</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant text-balanced">
+                    Drop by one of our roasteries and cafes, send us a note, or enquire about custom blends and wholesale options.
+                </p>
+            </div>
+        </section>
+
+        <!-- Branches & Details Split view -->
+        <section class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pb-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
+                
+                <!-- Left: Branch Selector List (5 Columns) -->
+                <div class="lg:col-span-5 flex flex-col gap-md">
+                    <h2 class="font-headline-md text-primary flex items-center gap-xs mb-sm">
+                        <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">store</span>
+                        Our Cafes
+                    </h2>
+                    <div id="contact-branches-selector" class="flex flex-col gap-sm">
+                        <!-- Clickable selection cards rendered here -->
+                    </div>
+                </div>
+
+                <!-- Right: Active Branch Details & Map Panel (7 Columns) -->
+                <div id="contact-active-details" class="lg:col-span-7 bg-surface-container-low rounded-xl p-md md:p-lg border border-primary/5 flex flex-col gap-lg transition-all duration-350">
+                    <!-- Loaded dynamically via JavaScript based on selected branch -->
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/10">
+    <div class="max-w-7xl mx-auto px-margin-desktop py-lg grid grid-cols-1 md:grid-cols-2 gap-gutter items-start">
+        <div class="flex flex-col gap-sm">
+            <h4 class="font-headline-md text-headline-md text-primary">Roasted Bean</h4>
+            <p class="text-on-surface-variant font-body-sm max-w-xs font-sans">Crafting exceptional coffee experiences through heart-driven roasting and community connection.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-gutter md:justify-self-end">
+            <div class="flex flex-col gap-xs">
+                <span class="font-label-md text-primary mb-xs">Explore</span>
+                <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#/">Menu</a>
+                <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#/menu">Our Menu</a>
+                <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#/about">Our Story</a>
+                <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#/contact">Contact Us</a>
+            </div>
+            <div class="flex flex-col gap-xs footer-social-links">
+                <span class="font-label-md text-primary mb-xs">Social</span>
+                <!-- Filled Dynamically -->
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-margin-desktop py-md border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-sm">
+        <p class="font-body-sm text-on-surface-variant">© 2024 Roasted Bean Roastery. All rights reserved.</p>
+        <div class="flex gap-md">
+            <a class="font-body-sm text-on-surface-variant hover:text-primary" href="#">Privacy Policy</a>
+            <a class="font-body-sm text-on-surface-variant hover:text-primary" href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<!-- App Script Entry point -->
+<script type="module" src="/src/main.ts"></script>
+
+</body>
+</html>
